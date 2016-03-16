@@ -1,0 +1,137 @@
+package com.taotao.redboy.activity;
+
+import java.util.ArrayList;
+
+import android.content.Intent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.taotao.redboy.R;
+import com.taotao.redboy.view.SingleView;
+
+public class SendTimeActivity extends BaseActivity {
+
+	private ArrayList<String> sendTimeList = null;
+	private ListView listView;
+
+	@Override
+	public void initView() {
+		back = (Button) findViewById(R.id.back);
+		listView = (ListView) findViewById(R.id.list_view);
+		back.setText("结算中心");
+		sendTimeList = new ArrayList<String>();
+		sendTimeList.add("周一到周五送货");
+		sendTimeList.add("双休日及公众假期送货");
+		sendTimeList.add("时间不限，工作日双休日及公众假期均可送货");
+	}
+
+	@Override
+	public void onClick(View v) {
+		
+		switch (v.getId()) {
+		case R.id.back:
+			finish();
+			break;
+		}
+	}
+	@Override
+	public void initData() {
+
+	}
+
+	private int checkedPosition = -1;
+
+	@Override
+	public void initLinstener() {
+		adapter = new MyAdapter();
+		back.setOnClickListener(this);
+		listView.setAdapter(adapter);
+
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+
+				checkedPosition = position;
+				System.out.println("checkedPosition:::::"+position);
+				
+				/*int checkedItemPosition = listView.getCheckedItemPosition();
+				System.out.println("当选中条目："+checkedItemPosition);*/
+				Intent intent=new Intent();
+				intent.putExtra("send_time", position);
+				setResult(CheckActivity.RES_CHOOSE_SEND_TIME,intent);
+//				adapter.notifyDataSetChanged();
+				
+			}
+		});
+
+	}
+
+	@Override
+	public int getLayout() {
+		return R.layout.activity_send_time;
+	}
+
+	private MyAdapter adapter;
+	private Button back;
+
+	private class MyAdapter extends BaseAdapter {
+
+		@Override
+		public int getCount() {
+			return sendTimeList.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return sendTimeList.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+
+			ViewHolder holder = null;
+			if (convertView == null) {
+
+				holder = new ViewHolder();
+				convertView =new SingleView(context);
+				holder.singleView=(SingleView) convertView;
+				convertView.setTag(holder);
+
+			} else {
+				holder = (ViewHolder) convertView.getTag();
+			}
+
+			if (position == checkedPosition) {
+				holder.singleView.setChecked(true);
+
+			} else {
+				holder.singleView.setChecked(false);
+			}
+
+			System.out.println(sendTimeList.get(position));
+			holder.singleView.setText(sendTimeList.get(position));
+			return convertView;
+		}
+
+	}
+
+	private class ViewHolder {
+
+		SingleView singleView;
+	}
+
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/tab_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_unshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_prod_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="抱歉,无此类商品!"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/ll_listview_menu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp" >
+
+        <RadioButton
+            android:id="@+id/btn_matket"
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:background="@drawable/segment_selected1selector"
+            android:text="销售"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/btn_price"
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:background="@drawable/segment_selected2selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="价格" />
+
+        <RadioButton
+            android:id="@+id/btn_comment"
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:background="@drawable/segment_selected2selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="好评" />
+
+        <RadioButton
+            android:id="@+id/btn_time"
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:background="@drawable/segment_selected3selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="上架时间" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_listview_menu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/listview_65bg_normal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/btn_matket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/segment_selected1selector"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:text="销量"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/segment_selected2selector"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:text="价格"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/segment_selected2selector"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:text="好评度"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/segment_selected3selector"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingRight="3dp"
+            android:paddingTop="7dp"
+            android:text="上架时间"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_search_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

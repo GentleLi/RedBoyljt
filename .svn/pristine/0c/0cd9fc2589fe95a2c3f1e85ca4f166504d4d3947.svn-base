@@ -1,0 +1,9 @@
+package com.taotao.redboy.res;
+
+public class HttpRes {
+	
+	
+	public static String base_uRL="http://192.168.2.109/ECServicez8";
+	
+
+}

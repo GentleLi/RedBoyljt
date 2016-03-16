@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_tab_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/head_bg"
+        android:gravity="center"
+        android:text="更多"
+        android:textColor="@color/tab_text_white"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/head_back"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/tab_text_white"
+            android:textSize="22dp" />
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/tv_user_centre"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账户中心"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:paddingLeft="5dp"
+        android:layout_centerVertical="true"
+        android:paddingRight="5dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/head_tab_more"
+        />
+    
+    
+
+    <TextView
+        android:id="@+id/tv_tab_more"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/back"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/back"
+        android:background="@drawable/head_tab_more"
+        android:gravity="center"
+        android:text="更多"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_tab_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/head_tab_more"
+        android:padding="5dp"
+        android:text="退出登录"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+package com.taotao.redboy.fragment;
+
+import android.view.View;
+import android.widget.TextView;
+
+public class BrandFragment extends BaseFragment {
+
+	@Override
+	public View initView() {
+		
+		TextView text=new TextView(getActivity());
+		text.setText("品牌分类页面");
+		return text;
+	}
+
+	@Override
+	public void initData() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

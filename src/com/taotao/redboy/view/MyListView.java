@@ -1,0 +1,33 @@
+package com.taotao.redboy.view;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.ListView;
+
+public class MyListView extends ListView {
+
+	public MyListView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+	}
+
+	public MyListView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+	}
+
+	public MyListView(Context context) {
+		super(context);
+	}
+	
+	
+	@Override
+	/**
+	 * 修改lisview的测量规则
+	 */
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		
+		heightMeasureSpec = MeasureSpec.makeMeasureSpec(MeasureSpec.AT_MOST, 100000);
+		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+	}
+
+	
+}

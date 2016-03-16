@@ -1,0 +1,25 @@
+package com.taotao.redboy.utils;
+
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.http.RequestParams;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
+import com.taotao.redboy.res.HttpRes;
+
+public class NetWorkUtils {
+	/**
+	 *get请求网络数据
+	 * @param url
+	 * @param callback
+	 */
+	public static void requestGetData(String url,
+			RequestCallBack<String> callback) {
+
+		HttpUtils httputils = new HttpUtils();
+		// post请求登陆
+		RequestParams params = new RequestParams();
+
+		httputils.send(HttpMethod.GET, HttpRes.base_uRL + url, params,
+				callback);
+	}
+}

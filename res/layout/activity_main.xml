@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout
+        android:id="@+id/frags_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bar_bg"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/TabTheme"
+            android:drawableTop="@drawable/tab_home_bg"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/rb_search"
+            style="@style/TabTheme"
+            android:drawableTop="@drawable/tab_search_bg"
+            android:text="@string/search" />
+
+        <RadioButton
+            android:id="@+id/rb_brand"
+            style="@style/TabTheme"
+            android:drawableTop="@drawable/tab_brand_bg"
+            android:text="@string/brand" />
+
+        <RadioButton
+            android:id="@+id/rb_cart"
+            style="@style/TabTheme"
+            android:drawableTop="@drawable/tab_cart_bg"
+            android:text="@string/cart" />
+
+        <RadioButton
+            android:id="@+id/rb_more"
+            style="@style/TabTheme"
+            android:drawableTop="@drawable/tab_more_bg"
+            android:text="@string/more" />
+    </RadioGroup>
+
+</LinearLayout>

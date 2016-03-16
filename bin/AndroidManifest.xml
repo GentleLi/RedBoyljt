@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taotao.redboy"
+    android:versionCode="1"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.taotao.redboy.activity.SplushActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ljl -->
+        <activity android:name="com.taotao.redboy.activity.MainActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.PersonCenterActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.NewproductActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.RegestActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.LogOutActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.TopicActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.SerachActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.DetailActivity" >
+        </activity>
+        <!-- zpp -->
+        <activity android:name="com.taotao.redboy.activity.HelpCentreActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.SearchShowActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.LoginActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.RegisterActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.UserCentreActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.AboutActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.MyOrderActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.OrderContentActivity" >
+        </activity>
+        
+        
+        <!-- ljt -->
+
+        <activity android:name="com.taotao.redboy.activity.CheckActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.FillDataActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.AddAddressActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.AddressListActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.ChoosePayMethodActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.SaleTicketActivity" >
+        </activity>
+        <activity android:name="com.taotao.redboy.activity.SendTimeActivity" >
+        </activity>
+    </application>
+
+</manifest>

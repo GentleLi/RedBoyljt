@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/product_list_bg"
+    android:padding="10.0dip" >
+
+    <ImageView
+        android:id="@+id/iv_product_icon"
+        android:layout_width="90dip"
+        android:layout_height="65dip"
+        android:background="@drawable/product_loading"
+        android:padding="1dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_toRightOf="@+id/iv_product_icon"
+        android:maxLines="3"
+        android:text="标题"
+        android:textColor="#363636"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_product_name"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/iv_product_icon" >
+		
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="价格1"
+            android:textColor="#ff0000"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/tv_product_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:maxLines="1"
+            android:text="价格2"
+            android:textColor="#cccccc"
+            android:textSize="19sp" />
+        <View 
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+             android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:background="#cccccc"
+            />
+        <TextView
+            android:id="@+id/tv_product_comment"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/tv_product_price"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="评论"
+            android:textColor="#828282"
+            android:textSize="14sp" />
+        
+        
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/left_product_itme_selector"
+            android:drawablePadding="5dp"
+            android:maxLines="1"
+            android:textColor="#828282"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
